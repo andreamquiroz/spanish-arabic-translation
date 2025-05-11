@@ -30,3 +30,64 @@ conda activate spanish_arabic
 
 # Install dependencies
 pip install -r requirements.txt
+
+```
+## Quick Start
+Translate Spanish text to Arabic:
+
+```python
+from scripts.translate import translate_spanish_to_arabic
+
+text = "La paz y la cooperación internacional son fundamentales para el desarrollo sostenible."
+translation = translate_spanish_to_arabic(text)
+print(translation)
+# Output: السلام والتعاون الدولي أمران أساسيان للتنمية المستدامة.
+
+```
+
+Or use the command line interface:
+
+```bash
+python scripts/translate.py --text "¿Cómo estás hoy?"
+
+```
+
+## Project Structure
+
+- notebooks/: Jupyter notebooks with the full development process
+
+  - 01_data_preprocessing.ipynb: Data cleaning, normalization, and preparation
+  - 02_model_implementation.ipynb: Model training, evaluation, and optimization
+
+
+- scripts/: Utility scripts for using the model
+- models/: Directory for model checkpoints (download separately)
+- data/: Data files used for training and evaluation
+- results/: Evaluation results and visualizations
+
+## Data
+The model was trained on approximately 17,000 Spanish-Arabic parallel sentences from:
+
+UN Parallel Corpus (UN v1.0 ar-es)
+
+OpenSubtitles corpus
+
+## Model Training
+Fine-tuned the MarianMT Helsinki-NLP/opus-mt-es-ar model with the following parameters:
+
+Learning rate: 5e-5
+
+Batch size: 16
+
+Training epochs: 4
+
+Optimizer: AdamW with weight decay 0.01
+
+Mixed precision training (FP16)
+
+## Acknowledgments
+Helsinki-NLP for the MarianMT pre-trained models
+
+Hugging Face for the Transformers library
+
+UN Parallel Corpus and OpenSubtitles for the training data
