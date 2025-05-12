@@ -4,7 +4,9 @@
 ![Model](https://img.shields.io/badge/Model-MarianMT-blue)
 ![Languages](https://img.shields.io/badge/Languages-Spanish--Arabic-orange)
 
-A high-quality neural machine translation system for translating Spanish text to Arabic, built using the MarianMT transformer architecture and optimized with advanced beam search techniques.
+A neural machine translation system for translating Spanish text to Arabic, built using the MarianMT transformer architecture and optimized with advanced beam search techniques.
+
+Medium Article: https://medium.com/@quirozmellany/prepping-for-my-arab-1-class-building-a-spanish-to-modern-standard-arabic-neural-translation-6133c3bccd82
 
 ## Overview
 
